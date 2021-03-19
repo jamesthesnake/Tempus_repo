@@ -14,11 +14,11 @@ The table contains the following columns:
 |VSReads | Total number of reads representing the variant i.e. Variant Supporting Reads|
 |PerReads | Percent of reads representing the variant|
 |Consequences | What the consquence of the variant is |
-
 |AlleFrequency | Allele Frequency according to ExAC Browser - Harvard|
 |Genes | Affected gene according to ExAC Browser - Harvard|
-Clone the Tempus Repo directory from Github
 ######
+Clone the Tempus Repo directory from Github
+
 
 Cd into Tempus_repo from your terminal shell
 
