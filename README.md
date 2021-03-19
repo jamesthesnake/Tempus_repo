@@ -8,8 +8,8 @@ This scripts annoates a VCF and outputs a CSV or TSV
 |Ref | Reference Allele|
 |Alt | Alternate Allele|
 |Annotation | Type of variant e.g. snp, insertion, del|
-|SeqDepth | Total read depth at variant location|
-|VSReads | Total number of reads representing the variant i.e. Variant Supporting Reads|
+|SequenceDepth | Total read depth at variant location|
+|VarsReads | Total number of reads representing the variant i.e. Variant Supporting Reads|
 |PerReads | Percent of reads representing the variant|
 |Consequences | What the consquence of the variant is |
 |AlleFrequency | Allele Frequency according to ExAC Browser - Harvard|
@@ -27,9 +27,7 @@ You should have python 3.7+ installed
 
 Install python3 and install the requests package
 pip install requirements.txt
-
-This is the programi
-
+this is the use of the program
 
 usage: var_tempus_annotate.py [-h] vcf outputfile
 
