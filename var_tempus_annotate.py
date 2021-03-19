@@ -201,6 +201,7 @@ def vcf_annotate(var_file, out_file):
 
         # call API every 350 lines
         if counter % 351 == 350:
+            print(f'Files {counter} processed of {num_lines}')
             csv_annotate = bulk_api_anntation(csv_annotate, bulk_lines,
                                               find_pattern_array)
             find_pattern_array = []
@@ -223,7 +224,7 @@ def vcf_annotate(var_file, out_file):
         writer = csv.writer(outfile, delimiter=delim)
         writer.writerow(fields)
         writer.writerows(zip(*[csv_annotate[key] for key in fields]))
-
+    print("finished!")
 
 if __name__ == '__main__':
 
