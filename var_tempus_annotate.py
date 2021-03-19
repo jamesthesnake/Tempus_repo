@@ -201,7 +201,7 @@ def vcf_annotate(var_file, out_file):
 
         # call API every 350 lines
         if counter % 351 == 350:
-            print(f'Files {counter} processed of {num_lines}')
+            print(f'Lines {counter} processed of {num_lines}')
             csv_annotate = bulk_api_anntation(csv_annotate, bulk_lines,
                                               find_pattern_array)
             find_pattern_array = []
