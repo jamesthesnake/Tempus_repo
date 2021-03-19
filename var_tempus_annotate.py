@@ -213,8 +213,8 @@ def vcf_annotate(var_file, out_file):
     #needed to hardcode this to make sure it keeps order on the csv/tsv
 
     fields = [
-        'Chr', 'Position', 'Ref', 'Alt', 'Annotation', 'Depth', 'VSReads', 'RO',
-        'SequenceDepth', 'PerReads', 'Consequence', 'AlleFreq', 'Genes'
+        'Chr', 'Position', 'Ref', 'Alt', 'Annotation', 'DP', 'VSReads', 'RO',
+        'SeqDepth', 'PVSReads', 'Consequence', 'AlleFreq', 'Genes'
     ]
     delim = ','
     if out_file[out_file.index(".") + 1:] == 'tsv':
@@ -233,7 +233,8 @@ if __name__ == '__main__':
         'vcf', help='VCF file location, put the input file here')
     parser.add_argument(
         'outputfile',
-        help='output file name, put the name of the output
+        help='output file name, put the name of the output file you would like'
+    )
 
     #shows help if theres nothing to do
     if len(sys.argv) == 1:
