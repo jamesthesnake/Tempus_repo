@@ -1,7 +1,5 @@
-# VCF Parser
-
-This script parses a VCF file and outputs a table in tab-separated values (TSV) form.  
-The table contains the following columns:  
+# VCF Tempus Parser
+This scripts annoates a VCF and outputs a CSV or TSV
 
 |Key | Description|
 |----|------------|
