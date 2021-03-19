@@ -161,10 +161,10 @@ def vcf_annotate(var_file, out_file):
             return_box = []
             for i in line.INFO['AO']:
                 return_box.append(i)
-            csv_annotate['VSReads'].append(return_box)
+            csv_annotate['VarsReads'].append(return_box)
         except Exception as error:
             print(" no variant supporting reads, exception: " + str(error))
-            csv_annotate['VSReads'].append('NA')
+            csv_annotate['VarsReads'].append('NA')
 
         # calculate number of reference allele observations
         try:
@@ -176,28 +176,28 @@ def vcf_annotate(var_file, out_file):
         # calculate total read depth at variant location seq depth
         try:
             return_box = []
-            for i in csv_annotate['VSReads'][-1]:
+            for i in csv_annotate['VarsReads'][-1]:
                 return_box.append(
                     str(float(csv_annotate['RO'][-1]) + float(i)))
-            csv_annotate['SeqDepth'].append(return_box)
+            csv_annotate['SequenceDepth'].append(return_box)
         except Exception as error:
             print(" no sequence total read, exception: " + str(error))
-            csv_annotate['SeqDepth'].append('NA')
+            csv_annotate['SequenceDepth'].append('NA')
 
         # calculate percent of variant supporting reads, to 4 floats
         try:
             return_box = []
-            for i in range(len(csv_annotate['SeqDepth'][-1])):
+            for i in range(len(csv_annotate['SequenceDepth'][-1])):
 
                 return_box.append(
                     str(
                         round(
-                            float(csv_annotate['VSReads'][-1][i]) / float(
-                                csv_annotate['SeqDepth'][-1][i]) * 100, 4)))
-            csv_annotate['PVSReads'].append(return_box)
+                            float(csv_annotate['VarsReads'][-1][i]) / float(
+                                csv_annotate['SequenceDepth'][-1][i]) * 100, 4)))
+            csv_annotate['PerReads'].append(return_box)
         except Exception as error:
             print(" no percent reads, exception: " + str(error))
-            csv_annotate['PVSReads'].append('NA')
+            csv_annotate['PerReads'].append('NA')
 
         # call API every 350 lines
         if counter % 351 == 350:
@@ -213,8 +213,8 @@ def vcf_annotate(var_file, out_file):
     #needed to hardcode this to make sure it keeps order on the csv/tsv
 
     fields = [
-        'Chr', 'Position', 'Ref', 'Alt', 'Annotation', 'DP', 'VSReads', 'RO',
-        'SeqDepth', 'PVSReads', 'Consequence', 'AlleFreq', 'Genes'
+        'Chr', 'Position', 'Ref', 'Alt', 'Annotation', 'DP', 'VarsReads', 'RO',
+        'SequenceDepth', 'PerReads', 'Consequence', 'AlleFreq', 'Genes'
     ]
     delim = ','
     if out_file[out_file.index(".") + 1:] == 'tsv':
