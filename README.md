@@ -1,6 +1,38 @@
 # VCF Tempus Parser
-This scripts annoates a VCF and outputs a CSV or TSV
+This script annotates a VCF file and outputs a CSV or TSV
 
+## Installation
+Clone the Tempus repo directory from GitHub:
+
+// right here, put three ` ticks
+git clone https://github.com/jamesthesnake/Tempus_repo.git
+cd Tempus_repo
+
+Install requirements.txt:
+
+// same as above, add 3 ` marks
+pip install -r requirements.txt
+or
+pip3 install -r requirements.txt
+You should have python 3.7+ installed
+
+Install python3 and install the requests package
+pip install requirements.txt
+this is the use of the program
+
+## Usage
+Run:
+// add 3 ` for the code block again for each of these
+var_tempus_annotate.py [-h] vcf outputfile
+
+positional arguments:
+  vcf         VCF file location, put the input file here
+  outputfile  output file name, put the name of the output file you would like
+
+optional arguments:
+  -h, --help  show this help message and exit
+
+## Output glossary
 |Key | Description|
 |----|------------|
 |Chr | Chromosome variant is locationed on|
@@ -15,28 +47,3 @@ This scripts annoates a VCF and outputs a CSV or TSV
 |AlleFrequency | Allele Frequency according to ExAC Browser - Harvard|
 |Genes | Affected gene according to ExAC Browser - Harvard|
 ######
-Clone the Tempus Repo directory from Github
-
-
-Cd into Tempus_repo from your terminal shell
-
-in the terminal console type: pip install -r requirements.txt
-or
-pip3 install -r requirements.txt
-You should have python 3.7+ installed
-
-Install python3 and install the requests package
-pip install requirements.txt
-this is the use of the program
-
-usage: var_tempus_annotate.py [-h] vcf outputfile
-
-positional arguments:
-  vcf         VCF file location, put the input file here
-  outputfile  output file name, put the name of the output file you would like
-
-optional arguments:
-  -h, --help  show this help message and exit
-
-
-
