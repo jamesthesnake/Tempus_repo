@@ -22,7 +22,7 @@ this is the use of the program
 
 ## Usage
 Run:
-///` 
+```
 var_tempus_annotate.py [-h] vcf outputfile
 
 positional arguments:
@@ -31,7 +31,7 @@ positional arguments:
 
 optional arguments:
   -h, --help  show this help message and exit
-///
+```
 ## Output glossary
 |Key | Description|
 |----|------------|
