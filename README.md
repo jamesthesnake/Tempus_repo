@@ -4,17 +4,17 @@ This script annotates a VCF file and outputs a CSV or TSV
 ## Installation
 Clone the Tempus repo directory from GitHub:
 
-// right here, put three ` ticks
+'''
+ticks
 git clone https://github.com/jamesthesnake/Tempus_repo.git
 cd Tempus_repo
-
+'''
 Install requirements.txt:
 
-// same as above, add 3 ` marks
-pip install -r requirements.txt
-or
+```
 pip3 install -r requirements.txt
 You should have python 3.7+ installed
+```
 
 Install python3 and install the requests package
 pip install requirements.txt
@@ -22,7 +22,7 @@ this is the use of the program
 
 ## Usage
 Run:
-// add 3 ` for the code block again for each of these
+///` 
 var_tempus_annotate.py [-h] vcf outputfile
 
 positional arguments:
@@ -31,7 +31,7 @@ positional arguments:
 
 optional arguments:
   -h, --help  show this help message and exit
-
+///
 ## Output glossary
 |Key | Description|
 |----|------------|
