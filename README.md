@@ -4,11 +4,11 @@ This script annotates a VCF file and outputs a CSV or TSV
 ## Installation
 Clone the Tempus repo directory from GitHub:
 
-'''
+```
 ticks
 git clone https://github.com/jamesthesnake/Tempus_repo.git
 cd Tempus_repo
-'''
+```
 Install requirements.txt:
 
 ```
