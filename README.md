@@ -39,6 +39,7 @@ optional arguments:
 |Position | Variants' location on the chromosome|
 |Ref | Reference Allele|
 |Alt | Alternate Allele|
+|DP | Total depth|
 |Annotation | Type of variant e.g. snp, insertion, del|
 |SequenceDepth | Total read depth at variant location|
 |VarsReads | Total number of reads representing the variant i.e. Variant Supporting Reads|
