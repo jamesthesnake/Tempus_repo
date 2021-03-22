@@ -5,7 +5,6 @@ This script annotates a VCF file and outputs a CSV or TSV
 Clone the Tempus repo directory from GitHub:
 
 ```
-ticks
 git clone https://github.com/jamesthesnake/Tempus_repo.git
 cd Tempus_repo
 ```
@@ -40,6 +39,7 @@ optional arguments:
 |Ref | Reference Allele|
 |Alt | Alternate Allele|
 |DP | Total depth|
+|RO | Number of reference allele observations|
 |Annotation | Type of variant e.g. snp, insertion, del|
 |SequenceDepth | Total read depth at variant location|
 |VarsReads | Total number of reads representing the variant i.e. Variant Supporting Reads|
