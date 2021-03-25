@@ -1,5 +1,5 @@
 # VCF Tempus Parser
-This script annotates a VCF file and outputs a CSV or TSV
+This script annotates a VCF file and outputs a CSV or TSV.a
 
 ## Installation
 Clone the Tempus repo directory from GitHub:
